@@ -2,6 +2,8 @@ eureka:
   client:
     register-with-eureka: false #表示是否将自己注册到Eureka Server上，默认为true
     fetch-registry: false       #表示是否从Eureka Server上获取注册信息，默认为true
+    serviceUrl: #主机自身默认也要注册，默认8761不会报错
+      defaultZone: http://localhost:1111/eureka
   server:
     enable-self-preservation: false
 spring:
